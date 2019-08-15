@@ -1,0 +1,110 @@
+<?php 
+
+$pessoas=array(
+   array(
+
+   'Nome'=> 'takeshi',
+   'Sobrenome'=> 'Nakamura',
+   'Cidade'=> 'Tóquio',
+   'País'=> 'igarasselva',
+   'telefone'=> 78172388,
+   'id'=> 17,
+
+   ),
+
+   array(
+
+   'Nome'=> 'Ranieri',
+   'Sobrenome'=> 'Valença',
+   'Cidade'=> 'Olinda',
+   'País'=> 'Recife',
+   'telefone'=> 28172388,
+   'id'=> 17117487164,
+
+   ),
+   
+   array(
+
+   'Nome'=> 'Thierry',
+   'Sobrenome'=> 'Matheus',
+   'Cidade'=> 'Vale da morte',
+   'País'=> 'Bom retiro',
+   'telefone'=> 28447188,
+   'id'=> 17117882164,
+
+   ),
+
+   array(
+
+   'Nome'=> 'Alexia',
+   'Sobrenome'=> 'Fernandez',
+   'Cidade'=> 'México',
+   'País'=> 'Paris',
+   'telefone'=> 2878788,
+   'id'=> 174776541,
+
+   ),
+
+   array(
+
+   'Nome'=> 'Pedro',
+   'Sobrenome'=> 'Araçoiaba',
+   'Cidade'=> 'Vale da morte',
+   'País'=> 'Bom retiro',
+   'telefone'=> 2848,
+   'id'=> 17117882164,
+
+   ),
+
+   array(
+
+   'Nome'=> 'Francesco',
+   'Sobrenome'=> 'Matheus',
+   'Cidade'=> 'Vale',
+   'País'=> 'Bom retiro',
+   'telefone'=> 247188,
+   'id'=> 1712164,
+
+   ),
+
+);
+
+
+?>
+
+<style type="text/css">
+	table {
+        font-family: Roboto, sans-serif, 'Lora';
+        border-collapse: collapse;
+        width: 100px;  
+    }
+
+    td, th {
+        border: 1px solid rgb(255,255,204);
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(even) {
+    background-color: rgb(255,255,204);
+    }
+</style>
+
+<table>
+	<tr>
+		<td>Nome</td>
+		<td>Sobrenome</td>
+		<td>Cidade</td>
+		<td>País</td>
+		<td>telefone</td>
+		<td>id</td>
+	</tr>
+      <?php for ($i = 0; $i < sizeof($pessoas); $i++): ?>
+      <tr>
+          <<?php foreach ($pessoas[$i] as $valor): ?>
+            <td><?= $valor ?></td>
+          <?php endforeach ?>          
+      </tr>
+    <?php endfor ?>
+
+
+</table>
